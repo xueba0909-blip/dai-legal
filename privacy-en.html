@@ -1,6 +1,6 @@
 # Privacy Policy for Dai - AI Voice Diary
 
-**Effective date:** August 30, 2026
+**Effective date:** September 8, 2026
 
 **Controller / Operator:** Qiror (Xiaolei Zhang) (“we,” “us,” or “Dai”)
 
@@ -8,11 +8,13 @@
 
 This Privacy Policy explains how we collect, use, store, share, and protect information when you use the Dai mobile application (listed on the App Store as “Dai - AI Voice Diary”) (the “App”). By using the App, you acknowledge that you have read this Policy. If you do not agree, please do not use the App.
 
+This Policy alone is not how we obtain permission to send your content to third-party AI. The App shows an in-app disclosure and asks for your permission **before** any personal content is sent to a third-party AI service. You can decline and still record, type, and save entries on this device.
+
 ---
 
 ### 1. Scope
 
-This Policy applies to the App on iOS and Android and related features, including voice journaling, AI transcription and editing, mood analysis, tags, weekly summaries, on-device storage, and optional cloud sync if you enable it.
+This Policy applies to the App on iOS and Android and related features, including voice journaling, optional AI transcription and editing, mood analysis, tags, weekly summaries, on-device storage, optional account linking, and optional cloud sync if you enable it.
 
 ---
 
@@ -23,13 +25,15 @@ This Policy applies to the App on iOS and Android and related features, includin
 * Voice recordings
 * Transcripts and AI-edited diary text
 * Mood scores/tags, keywords, insights, weekly reports, and related analytics content
-* Profile information (e.g., nickname, avatar, optional local email note)
+* Profile information (e.g., nickname, avatar)
+* Photos you attach to a capture
 * Content you export or share (e.g., share cards)
 
 **(b) Permissions and related data**
 
-* **Microphone:** to record voice journals (only with your permission)
-* **Photo Library:** only to save share cards when you choose to
+* **Microphone:** to record voice notes on this device (only with your permission)
+* **Camera:** to attach a photo to a capture when you choose to
+* **Photo Library:** to attach photos to captures and to save share cards when you choose to
 * **Notifications:** optional reminders (if enabled)
 
 **(c) Limited device / technical data**
@@ -47,13 +51,20 @@ This Policy applies to the App on iOS and Android and related features, includin
 
 ---
 
-### 3. How We Use Information
+### 3. How We Collect It
+
+We collect information only when you use a related feature: recording, typing, attaching a photo, editing a profile, exporting, linking an account, or tapping an AI action after you have given permission. Journal content stays on this device by default. We do not silently upload diary text in the background.
+
+---
+
+### 4. How We Use Information
 
 We use information to:
 
-* Provide recording, transcription, diary polishing, mood/tags/weekly features
-* Store, display, search, and manage your journals on device
-* Provide optional cloud sync when enabled
+* Record, store, display, search, and manage your captures and diaries on this device
+* Transcribe speech and organize notes **only after you give in-app permission** to share data with third-party AI
+* Generate optional insights or weekly summaries you request, after that same permission
+* Provide optional account linking and optional cloud sync when you enable them
 * Improve reliability (e.g., crash fixes) where permitted
 * Respond to support requests and comply with law
 
@@ -61,64 +72,76 @@ We do not use your diary content to serve personalized ads to you, and we do not
 
 ---
 
-### 4. Storage
+### 5. Storage
 
 **(a) On-device (default)**
 
-Journals, audio, mood/weekly data, and profile data are stored locally by default. Uninstalling the App or clearing app data may permanently delete local content. Please export backups.
+Journals, audio, attached photos, mood/weekly data, and profile data are stored locally by default. Uninstalling the App or clearing app data may permanently delete local content. Please export backups.
 
-**(b) Optional cloud sync**
+**(b) Optional cloud sync / account linking**
 
-If enabled, relevant content and metadata are transmitted and stored with us or our cloud providers for sync/backup/multi-device access. We do not bulk-upload journals to our cloud for sync until you enable it.
+If you enable sync or link an account, relevant content or identity metadata may be transmitted and stored with us or our infrastructure providers (for example, for sign-in). We do not bulk-upload journals to our cloud for sync until you enable it.
 
-**(c) Third-party AI processing**
+**(c) Third-party AI processing (only with permission)**
 
-When you use transcription or AI analysis, audio and/or text needed for that request are sent to third-party AI providers to generate transcripts, polished diaries, mood/tags/weekly outputs.
-
----
-
-### 5. Third-Party AI Services
-
-We may use providers such as (subject to change):
-
-* **Speech-to-text:** Tongyi / Alibaba Cloud Model Studio, etc. (Processes audio, language preference, technical metadata)
-* **Text analysis / polishing:** DeepSeek, etc. (Processes diary text and analysis context)
-
-Third parties process data under their own policies. We instruct them to process only what is needed to provide the service. We do not authorize third parties to use your diary content to train their public general-purpose AI models; whether API inputs are used to improve a provider’s services depends on that provider’s then-current terms and our contractual settings. Where available, we prefer configurations that disable training on customer content and will notify you of material changes.
-
-Using AI features means you understand content may leave your device for processing.
+Audio and/or text leave this device for AI processing **only after** you tap Allow on the in-app permission screen (during onboarding, before the first send, or later in Settings). If you choose “Not now,” you can still journal on this device. You can turn sharing off anytime in **Settings → Share data with third-party AI**.
 
 ---
 
-### 6. AI Training
+### 6. What Is Sent to Third-Party AI, and to Whom
+
+If you allow sharing, we send only what that request needs:
+
+| Purpose | Data sent | Recipient |
+| --- | --- | --- |
+| Speech-to-text | Voice recording and language preference | Alibaba Cloud Computing Ltd. (Tongyi / Qwen) via our proxy |
+| Note/diary organizing, insights, weekly summaries | The text you wrote or that was transcribed; for insights/weekly summaries, also mood score, energy, and keywords already stored with those entries | Hangzhou DeepSeek Artificial Intelligence Co., Ltd. (DeepSeek) via our proxy |
+| Request forwarding | The same audio or text for that request | Cloudflare, Inc. (Cloudflare Worker proxy). The App does not hold upstream API keys. |
+
+Photos, nickname, and account identifiers are **not** sent to these AI providers for transcription, organizing, insights, or weekly summaries.
+
+Provider privacy policies (current as of this Policy; please check the live page):
+
+* Cloudflare: https://www.cloudflare.com/privacypolicy/
+* DeepSeek: https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html
+* Alibaba Cloud: https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy
+
+We instruct providers to process only what is needed to complete the request. We do not authorize them to use your diary content to train public general-purpose models for Dai. Whether API inputs are used to improve a provider’s own services depends on that provider’s then-current terms and our contractual settings. Where available, we prefer configurations that disable training on customer content and will notify you of material changes.
+
+AI processing may occur outside your country (including in the People’s Republic of China for DeepSeek). Using AI after you grant permission includes acknowledgment of such transfers.
+
+---
+
+### 7. AI Training
 
 * **By us:** We do not use your journals or recordings to train our own general-purpose AI models, and we do not sell them for training.
 * **By providers:** Governed by their policies; we aim to use “no training on API data” modes where offered.
 
 ---
 
-### 7. Sharing
+### 8. Sharing
 
-We do not sell or rent your personal information except as needed for:
+We do not sell or rent your personal information. We share it only as needed for:
 
-* Service providers (AI, cloud sync if enabled, infrastructure)
+* Service providers named above (AI, request proxy) after you grant permission
+* Infrastructure for optional account linking or cloud sync if you enable it
 * Legal compliance
 * Protection of rights and safety
 * Business transfers (successor bound by this Policy)
 
 ---
 
-### 8. Retention
+### 9. Retention
 
-* **On-device journals/audio/profile:** Under your control; deleted when you delete entries or wipe data in-app.
-* **Cloud sync data (if enabled):** While your account/sync remains active; after deletion/closure, removed from active systems typically within 30 days (backups up to 90 days).
-* **AI request payloads we transmit:** Sent for the request; we do not keep a separate training corpus. Provider retention per their policy.
+* **On-device journals/audio/photos/profile:** Under your control; deleted when you delete entries or wipe data in-app.
+* **Cloud sync / account data (if enabled):** While your account/sync remains active; after deletion/closure, removed from active systems typically within 30 days (backups up to 90 days).
+* **AI request payloads we transmit:** Sent for that request; we do not keep a separate training corpus. Provider retention follows their policy.
 * **Support emails:** Typically up to 24 months.
 * **Diagnostics/logs (if any):** Typically up to 12 months.
 
 ---
 
-### 9. Your Rights
+### 10. Your Rights and Choices
 
 Subject to applicable law (e.g., GDPR, CCPA, PIPL), you may:
 
@@ -126,28 +149,24 @@ Subject to applicable law (e.g., GDPR, CCPA, PIPL), you may:
 * Correct entries and profile
 * Export a copy (e.g., JSON)
 * Delete entries or wipe local data; request deletion of cloud copies if sync is enabled
-* Withdraw consent by disabling permissions or AI/sync features
+* Decline AI sharing and still use on-device journaling
+* Withdraw AI sharing later in **Settings → Share data with third-party AI** (new audio/text will not be sent after you turn it off)
+* Disable microphone, camera, or photos in system settings
 * Contact xueba0909@gmail.com or your local regulator
 
 We aim to respond to verifiable requests within 30 days.
 
 ---
 
-### 10. Children’s Privacy
+### 11. Children’s Privacy
 
-The App is not directed to children under 13 (or higher age required in your jurisdiction). We do not knowingly collect children’s data. Contact us for deletion if you believe we have.
+The App is not directed to children under 13 (or the higher age required in your jurisdiction). We do not knowingly collect children’s data. Contact us for deletion if you believe we have.
 
 ---
 
-### 11. Security
+### 12. Security
 
 We use reasonable safeguards (local isolation, HTTPS, least privilege). No method is 100% secure—protect your device and export backups.
-
----
-
-### 12. International Transfers
-
-AI/cloud processing may occur outside your country. Where required, we use appropriate safeguards. Using those features constitutes acknowledgment of such transfers.
 
 ---
 
@@ -159,7 +178,7 @@ The current version does not use advertising IDs for cross-app tracking. If that
 
 ### 14. Changes
 
-We may update this Policy. Material changes will be indicated by a new effective date and/or in-app notice. Continued use means acceptance.
+We may update this Policy. Material changes will be indicated by a new effective date and/or in-app notice. Continued use means acceptance of the updated Policy. New AI sharing still requires in-app permission as described above.
 
 ---
 
